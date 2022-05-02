@@ -7,4 +7,4 @@ def index(request):
     return HttpResponse("Hello, world. You're at the index.")
 
 def test(request):
-    return HttpResponse("Hello, world. You're at the test.")
+    return render(request, 'index.html')  
