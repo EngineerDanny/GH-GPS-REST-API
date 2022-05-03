@@ -7,14 +7,17 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 def get_address(request):
     # get name from query string
-    name = request.GET.get('name')
+    # name = request.GET.get('name')
+
+    # get name from request body
+    name = request.data.get('name')
 
     # validate the name variable
     if name is None:
-        return Response(data={'error': 'Request is missing name query parameter'},
+        return Response(data={'error': 'Request is missing name in the body'},
                         status=status.HTTP_400_BAD_REQUEST)
 
     # type check the name variable
@@ -33,15 +36,15 @@ def get_address(request):
     return normal_response(address_list)
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 def get_gps(request):
     # get latitude and longitude from query params
-    latitude = request.GET.get('lat')
-    longitude = request.GET.get('long')
+    latitude = request.data.get('lat')
+    longitude = request.data.get('long')
 
     # validate the latitude and longitude variables
     if latitude is None or longitude is None:
-        return Response(data={'error': 'Request is missing latitude or longitude query parameters'},
+        return Response(data={'error': 'Request is missing latitude or longitude in the body'},
                         status=status.HTTP_400_BAD_REQUEST)
 
     # check whether latitude and longitude are numbers
@@ -57,9 +60,7 @@ def get_gps(request):
 
     # the address name can be the name or GPS address of the place
     address_list = fetch_address(action_url)
-
     return normal_response(address_list)
-
 
 
 def fetch_address(action_url):
@@ -96,7 +97,7 @@ def fetch_address(action_url):
     }},
         headers=get_address_headers(asaase_owner, asaase_user)
     )
-    
+
     address_txt = address_res.text
     if len(address_txt) == 0:
         return None
@@ -110,7 +111,19 @@ def fetch_address(action_url):
     return address_list
 
 
+def normal_response(address_list):
+    if address_list is None or len(address_list) == 0:
+        return Response(data={'status': 'No address found'},
+                        status=status.HTTP_204_NO_CONTENT)
+    return Response(
+        data={'status': 'Address found',
+              'address': address_list, 'count': len(address_list),
+              },
+        status=status.HTTP_200_OK)
+
 # a helper function to get the address headers
+
+
 def get_address_headers(asaase_owner, asaase_user):
     return {
         'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
@@ -122,7 +135,6 @@ def get_address_headers(asaase_owner, asaase_user):
         'Origin': 'https://ghanapostgps.com',
         'AsaaseOwner': asaase_owner,
         'AsaaseUser': asaase_user,
-
     }
 
 
@@ -134,14 +146,3 @@ def get_normal_headers():
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'Connection': 'keep-alive'
     }
-
-
-def normal_response(address_list):
-    if address_list is None or len(address_list) == 0:
-        return Response(data={'status': 'No address found'},
-                        status=status.HTTP_204_NO_CONTENT)
-    return Response(
-        data={'status': 'Address found',
-              'address': address_list, 'count': len(address_list),
-              },
-        status=status.HTTP_200_OK)
