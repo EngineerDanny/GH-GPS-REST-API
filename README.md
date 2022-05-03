@@ -177,14 +177,12 @@
         ```bash
             $ pip install -r requirements.txt
         ```
+
 * #### Running
-
    1. Start the server with:
-
     ```bash
         $ python manage.py runserver
     ```
-
    2. You can access the local server by sending a GET request to the ENDPOINT:
     ```
         http://localhost:9000/api/
@@ -200,7 +198,7 @@
 
 ## **License**
 <br/>
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from MIT. For more details, see the LICENSE file.
 
 Made with :heart: by <a href="https://github.com/EngineerDanny" target="_blank">EngineerDanny</a>
 
