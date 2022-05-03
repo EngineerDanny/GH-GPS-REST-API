@@ -7,6 +7,11 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 
+@api_view(['GET', 'POST'])
+def index(request):
+    return Response(data={'status': 'Success'}, status=status.HTTP_200_OK)
+
+
 @api_view(['POST'])
 def get_address(request):
     # get name from query string
