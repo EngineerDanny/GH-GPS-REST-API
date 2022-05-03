@@ -96,7 +96,10 @@ def fetch_address(action_url):
     }},
         headers=get_address_headers(asaase_owner, asaase_user)
     )
-
+    
+    address_txt = address_res.text
+    if len(address_txt) == 0:
+        return None
     address_data = address_res.json()
 
     try:
