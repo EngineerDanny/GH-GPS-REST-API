@@ -1,9 +1,9 @@
-# GH-GPS-DJANGO-REST-API
+# **GH-GPS-DJANGO-REST-API**
 
-A REST api for Ghana's Global Positioning System (GPS) written with Python Django 🐍🐍
+*A REST api for Ghana's Global Positioning System (GPS) written with Python Django 🐍🐍*
 <br/>
 
-## API Usage
+## **API Usage**
 
 <br/>
 <details>
