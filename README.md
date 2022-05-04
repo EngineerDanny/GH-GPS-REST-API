@@ -12,7 +12,7 @@
 
 ## Request
 
-<b>End Point URL:</b> http://127.0.0.1:8000/api/get-address<br>
+<b>End Point URL:</b> https://gh-gps.herokuapp.com/api/get-address<br>
 <b>Method:</b> GET<br>
 <b>Content-Type:</b> application/json<br><br>
 
@@ -86,7 +86,7 @@
 
 ## Request
 
-<b>End Point URL:</b> http://127.0.0.1:8000/api/get-gps<br>
+<b>End Point URL:</b> https://gh-gps.herokuapp.com/api/get-gps<br>
 <b>Method:</b> POST<br>
 <b>Content-Type:</b> application/json<br><br>
 
