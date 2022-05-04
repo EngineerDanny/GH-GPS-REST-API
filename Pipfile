@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+djangorestframework = "*"
+requests = "*"
+beautifulsoup4 = "*"
+
 
 [dev-packages]
 autopep8 = "*"
