@@ -7,14 +7,12 @@
 
 <br/>
 <details>
-<!-- http://127.0.0.1:9000/api/get-address?name=KNUST Guesthouse -->
-<!-- http://127.0.0.1:9000/api/get-gps?lat=6.6500&long=-1.64878 -->
 <summary>Get GhanaPostGPS Address from PlaceName or GPSName.</summary>
 <hr/>
 
 ## Request
 
-<b>End Point URL:</b> http://127.0.0.1:9000/api/get-address<br>
+<b>End Point URL:</b> http://127.0.0.1:8000/api/get-address<br>
 <b>Method:</b> GET<br>
 <b>Content-Type:</b> application/json<br><br>
 
@@ -82,14 +80,13 @@
 </details>
 <br/>
 <details>
-<!-- http://127.0.0.1:9000/api/get-address?name=KNUST Guesthouse -->
-<!-- http://127.0.0.1:9000/api/get-gps?lat=6.6500&long=-1.64878 -->
+
 <summary>Get GhanaPostGPS Address from Position (Latitude and Longitude) </summary>
 <hr/>
 
 ## Request
 
-<b>End Point URL:</b> http://127.0.0.1:9000/api/get-gps<br>
+<b>End Point URL:</b> http://127.0.0.1:8000/api/get-gps<br>
 <b>Method:</b> POST<br>
 <b>Content-Type:</b> application/json<br><br>
 
@@ -185,13 +182,13 @@
     ```
    2. You can access the local server by sending a GET request to the ENDPOINT:
     ```
-        http://localhost:9000/api/
+        http://localhost:8000/api/
     ``` 
    3. Use the following ENDPOINTS  
      ```
-        http://localhost:9000/api/
-        http://localhost:9000/api/get-address
-        http://localhost:9000/api/get-gps
+        http://localhost:8000/api/
+        http://localhost:8000/api/get-address
+        http://localhost:8000/api/get-gps
     ```       
     
 <br/>
