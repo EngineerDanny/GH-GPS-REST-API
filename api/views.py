@@ -12,6 +12,11 @@ def index(request):
     return Response(data={'status': 'Success'}, status=status.HTTP_200_OK)
 
 
+@api_view(['GET', 'POST'])
+def server_error(request):
+    return Response(data={'status': 'Error'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
 @api_view(['POST'])
 def get_address(request):
     # get name from query string
