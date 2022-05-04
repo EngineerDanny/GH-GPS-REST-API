@@ -190,19 +190,15 @@
 <summary>Running</summary>
 
    1. Start the server with:
-    ```bash
-        $ python manage.py runserver
-    ```
-   2. You can access the local server by sending a GET request to the ENDPOINT:
-    ```
-        http://localhost:8000/api/
-    ``` 
-   3. Use the following ENDPOINTS  
-     ```
-        http://localhost:8000/api/
-        http://localhost:8000/api/get-address
-        http://localhost:8000/api/get-gps
-    ```     
+      ```bash
+          $ python manage.py runserver
+      ``` 
+   2. You can access the local server by using the following ENDPOINTS: 
+      ```
+          http://localhost:8000/api/
+          http://localhost:8000/api/get-address
+          http://localhost:8000/api/get-gps
+      ```     
 </details> 
 
 <br/>
