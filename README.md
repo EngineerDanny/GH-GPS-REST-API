@@ -2,9 +2,9 @@
 
 *A REST api for Ghana's Global Positioning System (GPS) written with Python Django 🐍🐍*
 <br/>
+<br/>
 
 ## **API Usage**
-
 <br/>
 <details>
 <summary>Get GhanaPostGPS Address from PlaceName or GPSName.</summary>
@@ -146,10 +146,19 @@
 <br/>
 
 ## **API Local Set-Up**
-### Technologies
+<br/>
+<details>
+<summary>Technologies</summary>
+
 * [Django](https://www.djangoproject.com/): The web framework for perfectionists with deadlines (Django builds better web apps with less code).
 * [DRF](www.django-rest-framework.org/): A powerful and flexible toolkit for building Web APIs
-## Installation
+</details>
+
+<br/>
+
+<details>
+<summary>Installation</summary>
+
 * Make sure you've got [Python](https://www.python.org") installed.
 * Install virtualenv globally with:
     ```bash
@@ -173,9 +182,13 @@
     3. Install the dependencies needed to run the app:
         ```bash
             $ pip install -r requirements.txt
-        ```
+        ```    
+</details> 
+<br/>
 
-* #### Running
+<details>
+<summary>Running</summary>
+
    1. Start the server with:
     ```bash
         $ python manage.py runserver
@@ -189,8 +202,9 @@
         http://localhost:8000/api/
         http://localhost:8000/api/get-address
         http://localhost:8000/api/get-gps
-    ```       
-    
+    ```     
+</details> 
+
 <br/>
 
 ## **License**
