@@ -13,7 +13,7 @@
 ## Request
 
 <b>End Point URL:</b> https://gh-gps.herokuapp.com/api/get-address<br>
-<b>Method:</b> GET<br>
+<b>Method:</b> POST<br>
 <b>Content-Type:</b> application/json<br><br>
 
 ### Payload
