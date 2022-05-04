@@ -5,6 +5,21 @@ name = "pypi"
 
 [packages]
 django = "*"
+asgiref = "3.5.1"
+autopep8 = "1.6.0"
+beautifulsoup4 = "4.11.1"
+Django = "4.0.4"
+djangorestframework = "3.13.1"
+gunicorn = "20.1.0"
+idna = "3.3"
+pycodestyle = "2.8.0"
+pytz = "2022.1"
+requests = "2.27.1"
+soupsieve = "2.3.2.post1"
+sqlparse = "0.4.2"
+toml = "0.10.2"
+urllib3 = "1.26.9"
+whitenoise = "6.0.0"
 
 [dev-packages]
 autopep8 = "*"
